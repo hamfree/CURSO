@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- cimbal -->
+    <bean id="cimbal" class="com.spring.idolo.Cimbal" />
+
+    <!-- guitarra -->
+    <bean id="guitarra" class="com.spring.idolo.Guitarra" />
+
+    <!-- armonica -->
+    <bean id="armonica" class="com.spring.idolo.Armonica" />
+
+    <!-- juanList -->
+    <bean id="juanList" class="com.spring.idolo.Banda">
+        <property name="instrumentos">
+            <list>
+                <ref bean="guitarra" />
+                <ref bean="cimbal" />
+                <ref bean="armonica" />
+                <ref bean="armonica" />
+            </list>
+        </property>
+    </bean>
+
+    <!-- juanSet -->
+    <bean id="juanSet" class="com.spring.idolo.Banda">
+        <property name="instrumentos">
+            <set>
+                <ref bean="guitarra" />
+                <ref bean="cimbal" />
+                <ref bean="armonica" />
+                <ref bean="armonica" />
+            </set>
+        </property>
+    </bean>
+</beans>

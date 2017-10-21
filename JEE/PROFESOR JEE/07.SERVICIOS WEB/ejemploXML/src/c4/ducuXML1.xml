@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<cus:Customer   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+            xsi:schemaLocation="http://NamespaceTest.com/TiposCusSup 
+                                 customersupplier.xsd" 
+            xmlns:cus="http://NamespaceTest.com/TiposCusSup" 
+            xmlns:dir="http://NamespaceTest.com/TipoDireccion">
+    <cus:Dob> 1 de abril de 2013 </cus:Dob>
+    <cus:Address> 
+        <dir:Line1>rue del percebe 13</dir:Line1> 
+        <dir:Line2>28009 Madrid </dir:Line2>
+    </cus:Address>
+</cus:Customer> 
+  
+

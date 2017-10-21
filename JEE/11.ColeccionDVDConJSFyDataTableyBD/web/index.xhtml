@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <head>
+        <title>Mi Colección de DVD</title>
+    </head>
+    <h:body  style="text-align:center;font-family:courier">
+        <div>
+            <h1>Mi colección de DVD</h1>
+            <h2>Usted está conectado como  #{beanUsu.nombre} #{beanUsu.apellido}</h2>
+            <p>Seleccione una opción para continuar</p>
+            <h:form>
+                <ul>
+                    <li>
+                        <h:commandLink id="btnAgregar" action="agregar.xhtml">Agregar/Modificar/Buscar/Borrar un DVD</h:commandLink>
+                    </li>
+                    <li>
+                        <h:commandLink id="btnListar" action="#{beanColeccionDVD.listar(beanUsu.usuario)}">Listar DVDs</h:commandLink>
+                    </li>
+                    <li>
+                        <h:commandLink id="btnSalir" action="#{beanColeccionDVD.salir()}">Desconectar</h:commandLink>
+                    </li>
+                </ul>
+            </h:form>
+        </div>
+    </h:body>
+</html>

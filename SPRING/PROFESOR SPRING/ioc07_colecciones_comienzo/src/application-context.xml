@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+    <bean id="cimbal" class="com.spring.idolo.Cimbal" />
+    <bean id="guitarra" class="com.spring.idolo.Guitarra" />
+    <bean id="armonica" class="com.spring.idolo.Armonica" />
+    
+    <bean id="bandaList" class="com.spring.idolo.Banda">
+        <!-- 
+            Con la etiqueta "list" podemos pasar colecciones a un bean (en este caso es una colección de 3 referencias a los 
+            beans anteriores.
+        -->
+        <property name="instrumentos">
+          <list>
+              <ref bean="cimbal" />
+              <ref bean="guitarra" />
+              <ref bean="armonica" />
+          </list>
+        </property>
+    </bean>
+
+</beans>

@@ -1,0 +1,30 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="com.spring.bean03" />
+
+    <bean id="emp01" class="com.spring.bean03.Empleado" >
+        <constructor-arg value="Adriana" />
+    </bean>
+
+    <bean id="dir01" class="com.spring.bean03.Direccion">
+        <constructor-arg value="Vallehermoso 52" />
+        <constructor-arg value="Madrid" />
+    </bean>
+
+    <bean id="emp02" class="com.spring.bean03.Empleado" >
+        <constructor-arg value="Max" />
+        <property name="direccion" ref="dir01" />
+    </bean>
+
+    <bean id="empresa" class="com.spring.bean03.EmpresaUniPersonal" >
+        <property name="nombre" value="Spring SA"/>
+        <property name="empleado" ref="emp02" />
+    </bean>
+
+</beans>

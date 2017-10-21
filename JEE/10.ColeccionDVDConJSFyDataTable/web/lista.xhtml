@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Mi colección</title>
+    </h:head>
+    <h:body>
+        <h:dataTable id="table" value="#{beanColeccionDVD.lista}" var="dvd" border="1">
+            <f:facet name="header">
+                <h:outputText value="Tu coleccion de DVDs" />
+            </f:facet>
+            
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Título" />
+                </f:facet>
+                <h:outputText value="#{dvd.titulo}" />
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Director" />
+                </f:facet>
+                <h:outputText value="#{dvd.director}" />
+            </h:column>
+            
+            <f:facet name="footer">
+                <h:outputText value="Total : #{beanColeccionDVD.dameTamaño()}" />
+            </f:facet>
+        </h:dataTable>
+        <p><a href="index.xhtml">Volver al Inicio</a></p>
+    </h:body>
+</html>
+
+
+

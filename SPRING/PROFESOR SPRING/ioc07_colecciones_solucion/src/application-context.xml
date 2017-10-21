@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="gamoneda" class="com.spring.idolo.Gamoneda" />
+    <bean id="calderon" class="com.spring.idolo.Calderon" />
+    <bean id="cualquiera" class="com.spring.idolo.Cualquiera">
+        <constructor-arg value="Veinte presas hemos hecho..." />
+    </bean>
+
+    <bean id="multiPoeta" class="com.spring.idolo.MultiPoeta">
+        <property name="poemas">
+            <list>
+                <ref bean="gamoneda" />
+                <ref bean="calderon" />
+                <ref bean="cualquiera" />
+            </list>
+        </property>
+    </bean>
+</beans>

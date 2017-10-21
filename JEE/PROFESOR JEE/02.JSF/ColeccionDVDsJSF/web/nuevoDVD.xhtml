@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+          <h1>Agrege un nuevo DVD</h1>
+       <h:form>
+            <h:outputLabel for="titulo"  value="Titulo: " />
+            <h:inputText  id="titulo" size="20" value="#{dvdMB.titulo}" /><BR/>
+            <h:outputLabel for="director"  value="Director: " />
+            <h:inputText id="director" size="20" value="#{dvdMB.director}"  /><BR/>
+            <h:commandButton id="submitButton" action="#{coleccionMB.agregarDVD(dvdMB)}" value="Enviar" />
+        <BR/>
+           <h:commandLink action="#{coleccionMB.listar()}" value="Listar Coleccion" />
+           </h:form>
+    </h:body>
+</html>
+

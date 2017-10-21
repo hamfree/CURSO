@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<departments xmlns:pref="http://ejemplo.xml.cursojava"
+                   
+              xmlns:pref1="http://ejemplo1.xml.cursojava">        
+    >
+    <department num="1">
+        <department_id>10</department_id>
+        <department_name>Administration</department_name>
+        <pref1:manager_id/>
+        <location_id>1700</location_id>
+    </department>
+    <department num="2">
+        <department_id>20</department_id>
+        <department_name>Marketing</department_name>
+        <pref1:manager_id>201</manager_id>
+        <location_id>Toronto</location_id>
+    </department>
+</departments>

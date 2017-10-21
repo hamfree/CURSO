@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://curso-PC:8080/WS1_appweb/ElWS1?WSDL" uri="src/conf/xml-resources/web-service-references/ElWS1/wsdl/curso-PC_8080/WS1_appweb/ElWS1.wsdl"/>
+    <system systemId="http://curso-PC:8080/WS1_appweb/ElWS1?wsdl" uri="src/conf/xml-resources/web-service-references/ElWS1_1/wsdl/curso-PC_8080/WS1_appweb/ElWS1.wsdl"/>
+    <system systemId="http://curso-PC:8080/WS1_appweb/ElWS1?xsd=1" uri="src/conf/xml-resources/web-service-references/ElWS1_1/wsdl/curso-PC_8080/WS1_appweb/ElWS1.xsd_1.xsd"/>
+</catalog>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    <bean id="direccion" class="com.spring.bean.Direccion">
+        <constructor-arg value="Chile 6" /> 
+    </bean>
+    
+    <!-- Creacion de un bean con la etiqueta 'property' : usando los getters y setters ... -->
+    <bean id="estudiante" class="com.spring.bean.Estudiante">
+        <property name="nombre" value="Azucena" />
+        <property name="edad" value="22" />
+        <property name="direccion" ref="direccion" />
+    </bean>
+    
+    <!-- Con los namespaces de constructor (c) y propiedades (p) definidos al inicio del XML -->
+    
+    
+    <bean id="dir" class="com.spring.bean.Direccion" c:calle="Chile 6" />
+    <bean id="estudiante3" class="com.spring.bean.Estudiante" p:direccion="dir" />
+    
+    
+    <!-- 
+    El bean contenido en el bean "estud1" es un bean anónimo y anidado, al que sólo puede acceder el bean "estud1" 
+    Además el bean "estud1" tiene una serie de alias definidos en el atributo "name": "es1" y "es2"
+    -->
+    <bean id="estud1" class="com.spring.bean.Estudiante" name="es1;es2">
+        <constructor-arg>
+            <bean class="com.spring.bean.Direccion">
+                <constructor-arg value="Lepanto 13"/>
+            </bean>
+        </constructor-arg>
+    </bean>
+    
+    <!-- 
+    Sin tener que cambiar el código de Java podemos utilizar un bean u otro cambiando/eliminando los alias a los beans que 
+    necesitemos. Por ejemplo si añadimos el alias "est" al bean siguiente,"estud2",lo utilizará el main ... Si por el contrario lo
+    quitamos de este bean y lo ponemos al bean "estud1", el main usará éste.
+    -->
+    <bean id="estud2" class="com.spring.bean.Estudiante" name="est">
+        <constructor-arg>
+            <bean class="com.spring.bean.Direccion">
+                <constructor-arg value="Alcala 20"/>
+            </bean>
+        </constructor-arg>
+    </bean>
+    
+    
+    
+    
+</beans>

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Portal de Anuncios. Fin</title>
+    </h:head>
+    <h:body>
+        <h1>Portal de Anuncios. Fin.</h1>
+        <h1>Gracias por su anuncio,
+            <h:outputText value="#{usuBean.nombre}" />&nbsp;<h:outputText value="#{usuBean.apellido}" />
+        </h1>
+        <h2>El tema y texto de tu anuncio es el siguiente:</h2>
+        <h3>TEMA</h3>
+        <p>
+            <h:outputText value="#{anuBean.tema}" />
+        </p>
+        <h3>TEXTO</h3>
+        <p>
+            <h:outputText value="#{anuBean.texto}" />
+        </p>
+    </h:body>
+</html>
+

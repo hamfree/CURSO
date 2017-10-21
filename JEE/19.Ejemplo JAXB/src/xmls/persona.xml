@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<person  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+         xsi:noNamespaceSchemaLocation='persona.xsd'>
+
+    <name>Juan Francisco</name>
+</person>
+

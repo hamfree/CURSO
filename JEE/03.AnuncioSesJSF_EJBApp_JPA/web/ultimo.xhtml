@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Portal de anuncios. (EJB y JPA). Introduzca los datos de su anuncio</title>
+    </h:head>
+    <h:body style="text-align: center;font-family: monospace">
+        <h1>Gracias por registrar su anuncio en nuestro portal</h1>
+        <div style="margin-left: 40%;margin-right: 40%;">
+            <p style="border: 1px solid black;">
+                Nombre..... :&nbsp;#{usuBean.nombre}<br/>
+                Apellido... :&nbsp;#{usuBean.apellido}
+            </p>
+            <p style="border: 1px solid black;">
+                <span style="text-align: right">Tema....... :&nbsp;</span><span style="text-align: left">#{anuncioBean.tema}</span><br/>
+                <span style="text-align: right">Texto...... :&nbsp;</span><span style="text-align: left">   #{anuncioBean.mensaje}</span>
+            </p>
+            <p>
+                <a href="anuncio.xhtml">Insertar otro anuncio</a>
+            </p>
+        </div>
+    </h:body>
+</html>
+

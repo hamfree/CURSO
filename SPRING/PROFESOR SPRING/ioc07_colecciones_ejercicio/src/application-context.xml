@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+    <bean id="poema1" class="com.spring.bean.Pareado">
+        <constructor-arg value="Con cien cañones por banda" />
+    </bean>
+    <bean id="poema2" class="com.spring.bean.Pareado">
+        <constructor-arg value="No corta el mar si no que vuela" />
+    </bean>
+    <bean id="poema3" class="com.spring.bean.Pareado">
+        <constructor-arg value="Un velero bergantin llamado Libertad" />
+    </bean>
+    
+    <bean id="multiPoeta" class="com.spring.bean.MultiPoeta">
+        <!-- 
+            Con la etiqueta "list" podemos pasar colecciones a un bean (en este caso es una colección de 3 referencias a los 
+            beans anteriores.
+        -->
+        <property name="poemas">
+          <list>
+              <ref bean="poema1" />
+              <ref bean="poema2" />
+              <ref bean="poema3" />
+          </list>
+        </property>
+    </bean>
+
+</beans>

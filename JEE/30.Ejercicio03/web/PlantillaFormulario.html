@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Plantilla de formulario con estilos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <style type="text/css" scoped="">
+            div {
+                margin: .4em 0;
+            }
+            div label {
+                width: 25%;
+                float: left;
+            }
+
+            input:focus {
+                border: 2px solid #000;
+                background: #F3F3F3;
+            }
+        </style>
+        <form>
+            <fieldset>
+                <legend>Alta en el servicio</legend>
+
+                <div>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" />
+                </div>
+
+                <div>
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" id="apellidos" size="35" />
+                </div>
+                ...
+            </fieldset>
+        </form> 
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="decision" class="com.spring.bean.AutorizacionFactory" />
+
+    <bean id="autorizacion" class="com.spring.bean.AutorizacionFactory"
+          factory-method="getAutorizacion">
+        <constructor-arg value="true" />
+    </bean>
+
+    <bean id="autorizacion2" factory-bean="decision"
+          factory-method="getAutorizacion2" c:_0="true" />
+
+</beans>

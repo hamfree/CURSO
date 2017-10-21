@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<dir:Direccion   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+            xsi:schemaLocation="http://NamespaceTest.com/TipoDireccion 
+                                 direccion.xsd" 
+            xmlns:dir="http://NamespaceTest.com/TipoDireccion">
+   
+        <dir:Line1>rue del percebe 13</dir:Line1> 
+        <dir:Line2>28009 Madrid </dir:Line2>
+   
+</dir:Direccion> 
+  
+

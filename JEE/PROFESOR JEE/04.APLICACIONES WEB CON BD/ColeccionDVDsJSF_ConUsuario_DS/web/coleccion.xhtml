@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h1>Mi Coleccion</h1>
+
+
+        
+        
+        <h:dataTable  value="#{coleccionMB.lista}" var="elem" border="1">
+            <h:column>
+                <f:facet name="header">Director</f:facet>
+                <h:outputText value="#{elem.director}" />
+            </h:column>
+              <h:column>
+                <f:facet name="header">Titulo</f:facet>
+                <h:outputText value="#{elem.titulo}" />
+            </h:column>
+        </h:dataTable>
+
+        <h:form>
+            <h:commandLink action="#{coleccionMB.irAAgregar()}" value="Ir A Gestion de DVDs" /><BR/>
+              <h:commandLink action="#{coleccionMB.salir()}" value="Salir" /><BR/>
+        </h:form>
+    </h:body>
+</html>
+

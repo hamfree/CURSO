@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Portal de Anuncios. (EJB, JPA)</title>
+    </h:head>
+
+    <h:body style="text-align: center;font-family: monospace">
+        <h1>Portal de Anuncios. (EJB, JPA)</h1>
+        <h2>Introduzca su nombre y contraseña para poder registrar su anuncio</h2>
+        <h:form>
+            <p><h:outputLabel for="nombre"  value="Usuario: " />
+                <h:inputText id="nombre" size="10" value="#{usuBean.nombre}" /></p>
+            <p><h:outputLabel for="pass"  value="Password: " />
+                <h:inputSecret id="pass" size="10" value="#{usuBean.password}"  /></p>
+            <p><h:commandButton id="submitButton" action="#{usuBean.registrar()}" value="Enviar" /></p>
+        </h:form>
+        <h:outputText value="#{usuBean.mensajesError}" style="color:red"/>
+    </h:body>
+</html>
+

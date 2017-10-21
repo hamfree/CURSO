@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Colecciones de DVD ACME (Con JSF, MVC y JDBC)</title>
+    </h:head>
+
+    <h:body style="text-align:center;font-family:courier">
+        <H1> Bienvenido a la página, registrate</H1>
+        <h:form>
+            <h:outputLabel for="usu"  value="Usuario: " />
+            <h:inputText id="usu" size="10" value="#{beanUsu.nombre}" /><br/>
+            <h:outputLabel for="pass"  value="Password: " />
+            <h:inputSecret id="pass" size="10" value="#{beanUsu.password}"  /><br/>
+            <h:commandButton id="submitButton" action="#{beanUsu.conectar()}" value="Enviar" /><br/><br/>
+            <h:outputText id="error" value="#{beanUsu.msgError}" style="color: red;"/>
+        </h:form>
+    </h:body>
+</html>

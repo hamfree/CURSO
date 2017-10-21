@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Direccion xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://NamespaceTest.com/TipoDireccion direccion.xsd"
+           xmlns="http://NamespaceTest.com/TipoDireccion">
+    <Line1>Rue del Percebe, 13</Line1>
+    <Line2>28009 Madrid</Line2>
+</Direccion>

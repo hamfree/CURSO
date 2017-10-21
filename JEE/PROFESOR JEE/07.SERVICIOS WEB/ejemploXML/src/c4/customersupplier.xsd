@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://NamespaceTest.com/TiposCusSup" 
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+              xmlns:dir="http://NamespaceTest.com/TipoDireccion"
+            elementFormDefault="qualified">
+  
+    <xsd:import schemaLocation="direccion.xsd" 
+                namespace="http://NamespaceTest.com/TipoDireccion" />
+
+    <xsd:element name="Customer">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="Dob" type="xsd:string"/> 
+                <xsd:element name="Address" type="dir:AddressType"/>
+            </xsd:sequence> 
+        </xsd:complexType> 
+    </xsd:element> 
+  
+</xsd:schema> 

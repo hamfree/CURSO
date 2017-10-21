@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Juego Mastermid</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Juego de Mastermind</h1>
+        <div>en este juego el ordenador generará una cifra aleatoria de tres dígitos, que no podrán 
+            repetirse. Además, la cifra no podrá comenzar por 0. Después se te pedirá que introduzcas un
+            número intentando adivinar ese numero aleatorio. Se te darán pistas de la siguiente forma:
+            <ul>
+                <li>Si aciertas posición y dígito te indicará 'un muerto'.</li>
+                <li>Si aciertas sólo la posición te indicará 'un herido'.</li>
+                <li>Si no aciertas ni el dígito ni la posición no te indicará nada.</li>
+            </ul>
+            <!-- 
+            La forma de pasarle parámetros a un servlet/jsp en la URL sigue el siguiente patron:
+            
+            .../contextoAplicacion/nombreServlet?clave_1=valor_1&clave_2=valor_2&...&clave_n=valor_n
+            
+            Es exactamente igual al método GET de un formulario HTML.
+            -->
+            <a href="iniciaJuego?clave1=valor1&clave2=valor2&clave3=valor3">Comenzar el juego</a>
+        </div>
+    </body>
+</html>

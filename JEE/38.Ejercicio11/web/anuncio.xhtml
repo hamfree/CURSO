@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Portal de Anuncios. Indique los datos de su anuncio</title>
+    </h:head>
+    <h:body>
+        <h1> Bienvenido, <h:outputText value="${usuBean.nombre}" />&nbsp;<h:outputText value="${usuBean.apellido}" /></h1>
+        <h2>indique el tema y el texto de su anuncio</h2>
+        <h:form>
+            <p>
+                <h:outputLabel for="tema" value="Tema....:" />
+                <h:inputText id="tema" size="40" value="#{anuBean.tema}" />
+            </p>
+            <p>
+                <h:outputLabel for="texto" value="Texto...: " />
+                <h:inputTextarea id="texto" cols="60" rows="5" value="#{anuBean.texto}" />
+            </p>
+            <h:commandButton id="submitButton" action="#{anuBean.enviar()}" value="Enviar" />
+        </h:form>
+    </h:body>
+</html>

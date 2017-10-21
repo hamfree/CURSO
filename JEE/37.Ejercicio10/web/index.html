@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Atina al cero</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body style="text-align: center" onload="startHello()">
+        <script type="text/javascript">
+            var requestPending = false;
+            function startHello() {
+                // Para que no se acumulen peticiones, porque no se haya procesado la petición actual.
+                if (!requestPending) {
+                    requestPending = true;
+                    var xmlhttp = initRequest();
+                    var url = "dameDigito"; // Patron URL del servlet que devuelve el contador
+                    xmlhttp.open("GET", url, true); // Llamada asíncrona al servlet 
+                    xmlhttp.onreadystatechange = function () {
+                        if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+                            document.getElementById("digito").innerHTML = xmlhttp.responseText;
+                            
+                            
+                            requestPending = false;
+                            // Intervalo de tiempo entre peticiones AJAX al servlet (100 milisegundos)
+                            setTimeout(startHello, 100);
+                        }
+                    };
+                    xmlhttp.send();
+                }
+            }
+
+            function initRequest() {
+                if (window.XMLHttpRequest) {
+                    if (navigator.userAgent.indexOf('MSIE') !== -1) {
+                        isIE = true;
+                    }
+                    return new XMLHttpRequest();
+                } else if (window.ActiveXObject) {
+                    isIE = true;
+                    return new ActiveXObject("Microsoft.XMLHTTP");
+                }
+            }
+        </script>
+        <h1>Atínale al cero</h1>
+        <hr>
+        <div style="font-size: larger">Atínale al cero : <span id="digito"></span></div>
+        <hr>
+        <form action="dameDigito" method="post">
+            <input type="submit" value="Atinar" name="btnAtinar" />
+        </form>
+    </body>
+</html>

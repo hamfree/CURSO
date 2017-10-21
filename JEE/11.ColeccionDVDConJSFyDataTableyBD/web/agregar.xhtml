@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Agregar un DVD nuevo</title>
+    </h:head>
+    <h:body  style="text-align:center;font-family:courier">
+        <div>
+            <h1>Gestionar DVD's de su colección</h1>
+            <h2>Usted está conectado como  #{beanUsu.nombre} #{beanUsu.apellido}</h2>
+            <h:form>
+                <p>
+                    <h:outputLabel for="titulo"  value="Titulo..... :" />
+                    <h:inputText id="titulo" size="45" value="#{beanDvd.titulo}" />
+                </p>
+                <p>
+                    <h:outputLabel for="director"  value="Director... :" />
+                    <h:inputText id="director" size="45" value="#{beanDvd.director}" />
+                </p>
+                <p>
+                    <h:commandButton id="btnAgregar" 
+                                     action="#{beanColeccionDVD.agregar(beanDvd,beanUsu.usuario)}" value="Agregar"/> | 
+                    <h:commandButton id="btnModificar" 
+                                     action="#{beanColeccionDVD.modificar(beanDvd, beanUsu.usuario)}" value="Modificar"/> | 
+                    <h:commandButton id="btnBuscar" 
+                                     action="#{beanDvd.buscar(beanDvd.titulo, beanDvd.director, beanUsu.usuario)}" value="Buscar"/>  | 
+                    <h:commandButton id="btnBorrar" 
+                                     action="#{beanColeccionDVD.borrar(beanDvd, beanUsu.usuario)}" value="Borrar"/> 
+                </p>
+                <p>
+                    <h:messages id="mensaje">#{beanDvd.mensaje}</h:messages>
+                </p>
+            </h:form>
+            <p><a href="index.xhtml">Volver al Inicio</a></p>
+        </div>
+    </h:body>
+</html>
+
