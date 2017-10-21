@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Gracias, aqui tiene su anuncio</title>
+    </h:head>
+    <h:body style="text-align:center;font-family:courier">
+        <h1>Gracias, #{usuBean.nombre} #{usuBean.apellido}, aquí tiene su anuncio</h1>
+        <h:form>
+            <p>Nombre : #{usuBean.nombre} </p>
+            <p>Apellido : #{usuBean.apellido}</p>
+            <p>Tema : #{anuncioBean.tema}</p>
+            <p>Mensaje : #{anuncioBean.mensaje}</p>
+            <h:commandLink action="index.xhtml" value="Volver" />
+        </h:form>
+    </h:body>
+</html>
+
